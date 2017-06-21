@@ -1,0 +1,95 @@
+35 58 7a 2b 00 00 00 47 0a 09 45 6d 65 72 74 6f
+6e 6f 6d 12 09 42 6f 62 6f 56 52 20 5a 34 1d e3
+a5 1b 3d 25 8f c2 75 3d 2a 10 00 00 48 42 00 00
+48 42 00 00 48 42 00 00 48 42 35 e3 a5 1b 3d 3a
+08 29 5c 0f 3e cd cc cc 3d 50 00 58 00 60 03
+
+
+35 58 7a 2b 00 00 00 
+Lead-in
+
+47 
+Bytes Remaining
+
+0a 
+Tag for Manufacturer Name
+
+09 
+Length: 9 bytes
+
+45 6d 65 72 74 6f 6e 6f 6d 
+ E  m  e  r  t  o  n  o  m
+
+12 
+Tag for Device Name
+
+09 
+9 bytes
+
+42 6f 62 6f 56 52 20 5a 34 
+ B  o  b  o  V  R     Z  4
+
+1d 
+Screen-to-Lens Distance
+
+e3 a5 1b 3d 
+0.038
+38mm
+
+25 
+Interlens Distance
+
+8f c2 75 3d 
+0.06
+60mm
+
+2a 
+Left Eye Field of View Angles
+
+10 
+16 bytes
+
+00 00 48 42 
+00 00 48 42 
+00 00 48 42 
+00 00 48 42 
+All 50
+
+
+35
+Tray-to-lens Distance
+
+e3 a5 1b 3d 
+0.038
+38mm
+
+3a
+Distortion Coefficients
+
+08 
+8 bytes
+
+29 5c 0f 3e 
+0.14
+
+cd cc cc 3d 
+0.1
+
+50 
+Has Magnet?
+
+00 
+False
+
+58 
+Vertical Alignment Type
+
+00 
+Bottom
+
+
+60 
+Primary Button Type
+
+03
+Indirect Touch

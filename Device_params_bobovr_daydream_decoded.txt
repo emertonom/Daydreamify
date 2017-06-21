@@ -1,0 +1,218 @@
+35 58 7a 2b 00 00 00 
+65
+0a 
+09 
+45 6d 65 72 74 6f 6e 6f 6d 
+12 
+09 
+42 6f 62 6f 56 52 20 5a 34 
+1d 
+e3 a5 1b 3d 
+25 
+8f c2 75 3d 
+2a 
+10 
+00 00 48 42 
+00 00 48 42 
+00 00 48 42 
+00 00 48 42 
+35
+e3 a5 1b 3d 
+3a
+08 
+29 5c 0f 3e 
+cd cc cc 3d 
+50 
+00 
+58 
+00 
+60 
+03
+9a 91 60
+1a
+08 
+01 
+12 
+0a 
+0d 00 
+00 00 
+00 15 
+f4 fd 
+d4 3c 
+12 
+0a 
+0d 00 
+00 00 
+00 15 
+f4 fd 
+d4 bc
+
+
+
+
+
+
+
+
+
+
+
+35 58 7a 2b 00 00 00 
+Lead-in
+
+65
+Original Bytes Remaining: 47h = 71d
+With added bytes from daydream: 101d = 65h
+
+0a 
+Tag for Manufacturer Name
+
+09 
+Length: 9 bytes
+
+45 6d 65 72 74 6f 6e 6f 6d 
+ E  m  e  r  t  o  n  o  m
+
+12 
+Tag for Device Name
+
+09 
+9 bytes
+
+42 6f 62 6f 56 52 20 5a 34 
+ B  o  b  o  V  R     Z  4
+
+1d 
+Screen-to-Lens Distance
+
+e3 a5 1b 3d 
+0.038
+38mm
+
+25 
+Interlens Distance
+
+8f c2 75 3d 
+0.06
+60mm
+
+2a 
+Left Eye Field of View Angles
+
+10 
+16 bytes
+
+00 00 48 42 
+00 00 48 42 
+00 00 48 42 
+00 00 48 42 
+All 50
+
+
+35
+Tray-to-lens Distance
+
+e3 a5 1b 3d 
+0.038
+38mm
+
+3a
+Distortion Coefficients
+
+08 
+8 bytes
+
+29 5c 0f 3e 
+0.14
+
+cd cc cc 3d 
+0.1
+
+50 
+Has Magnet?
+
+00 
+False
+
+58 
+Vertical Alignment Type
+
+00 
+Bottom
+
+
+60 
+Primary Button Type
+
+03
+Indirect Touch
+
+
+-----------------------------------------------
+Copied from Daydream View:
+
+9a 91 60
+Tag? 
+This seems like it should be a tag, but tags are stored in a varint with tag# << 3 | wiretype,
+using seven bits per byte for the number and the high bit per byte as a "continued" flag.
+Bits:
+10011010 10010001 01100000
+Dropping the "continue" bits and the wire type (Varint), we get
+0011010001000101100
+or
+107052 in decimal, 1A22C in hex.
+
+That seems way too big to be a valid field number.
+Still, let's treat it as valid--we need to get through this protobuf.
+Type is Varint.
+Added Bytes so far:  3
+ 
+1a
+26 decimal.
+Added Bytes so far: 4
+ 
+08 
+Tag? Bits: 00001 000
+Field #1: Manufacturer's Name...again?
+Type: Varint!?
+Added Bytes so far: 5
+
+Okay, something's going off the rails here for sure. Let's plow on for now.
+
+01 
+1 decimal.
+Added Bytes so far: 6
+
+12 
+Tag? Bits: 00010 010
+Field #2: Device Name again.
+Type: Length-delimited.
+Added Bytes so far: 7
+
+0a 
+Length of field: 10 bytes.
+Added Bytes so far: 8
+
+0d 00 
+00 00 
+00 15 
+f4 fd 
+d4 3c 
+
+Added Bytes so far: 18
+
+12 
+Tag? This is the same tag as last time.
+Added Bytes so far: 19
+
+0a 
+Length of field: 10 bytes.
+Added Bytes so far: 20
+
+0d 00 
+00 00 
+00 15 
+f4 fd 
+d4 bc
+
+Added Bytes so far: 30
