@@ -34,9 +34,9 @@ Step 3:
 Run the daydreamify app.
 
 Step 4:
-Run these commands:
-adb shell rm /storage/emulated/0/Cardboard/current_device_params
-adb push current_device_params /storage/emulated/0/Cardboard
+Run this command:
+
+adb push new_device_params /storage/emulated/0/Cardboard/current_device_params
 
 Step 5:
 Go into the phone settings, and open Apps settings.
