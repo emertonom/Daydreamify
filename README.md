@@ -46,7 +46,12 @@ On the screen that comes up, choose Clear Cache, then Clear Data.
 Both the Cache line and the Data line should now show 0.
 
 Step 6:
-Run Daydream again, and proceed through the setup screens.
+Run Daydream again, and proceed through the setup screens. When it gets
+to the screen asking you to set up the controller, if you don't have a
+controller, just hit "back" and then relaunch the Daydream app, and
+it'll take you to the home Daydream screen (with app choices and such).
+
+Step 7:
 When you get to the home Daydream screen, use the hamburger menu to
 bring up Settings. The headset should show as "Default."
 Click on this setting. Daydream will ask for permission to access files,
